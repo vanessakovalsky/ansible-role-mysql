@@ -1,4 +1,7 @@
 ---
+- name: Force start of mysql service.
+  command: service mysql start
+  
 - name: Ensure default user is present.
   mysql_user:
     name: "{{ mysql_user_name }}"
