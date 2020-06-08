@@ -1,8 +1,8 @@
-# Ansible Role: MySQL
-
-[![Build Status](https://travis-ci.org/geerlingguy/ansible-role-mysql.svg?branch=master)](https://travis-ci.org/geerlingguy/ansible-role-mysql)
+# Ansible Role: MySQL - Working in Ubuntu on Docker
 
 Installs and configures MySQL or MariaDB server on RHEL/CentOS or Debian/Ubuntu servers.
+This is a fork of https://github.com/geerlingguy/ansible-role-mysql 
+I've add what missing to make this role working on a Docker container, since there is a bug in Ansible inside docker prevent mysql to start correctly, and also an issue with the version of python
 
 ## Requirements
 
