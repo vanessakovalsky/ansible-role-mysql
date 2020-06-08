@@ -2,6 +2,11 @@
 # Variable configuration.
 - include_tasks: variables.yml
 
+- include_tasks: Set discovered Ansible Python interpreter.
+  set_fact:
+    ansible_python_interpreter: "{{ ansible_facts.python.executable }}"
+  when: ansible_python_interpreter is not defined
+
 # Setup/install tasks.
 - include_tasks: setup-RedHat.yml
   when: ansible_os_family == 'RedHat'
